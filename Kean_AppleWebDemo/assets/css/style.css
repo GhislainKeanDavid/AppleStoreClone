@@ -1,0 +1,300 @@
+* {
+    box-sizing: border-box;
+}
+
+
+@font-face {
+    font-family: 'SFProDisplayMedium'; /* Name of the font in your CSS */
+    src: url('assets/fonts/sf-pro-display-cufonfonts/SFPRODISPLAYMEDIUM.OTF') format('opentype'); /* Correct path and format */
+    font-weight: 500; /* Medium weight is typically 500 */
+    font-style: normal; /* Normal style unless it's italic */
+}
+
+
+.gradient-text {
+    font-size: 48px; /* Adjust text size as needed */
+    font-weight: bold; /* Optional: make the text bold */
+    background-image: linear-gradient(to right, rgb(92, 176, 255), rgb(133, 68, 255), rgb(197, 47, 177), rgb(245, 68, 142));
+    -webkit-background-clip: text; /* Apply the background clip in WebKit-based browsers (like Safari) */
+    background-clip: text; /* Apply the background clip in modern browsers */
+    color: transparent; /* Make the text itself transparent to reveal the gradient */
+}
+
+.gradient-subtext {
+    font-size: 28px; /* Adjust text size as needed */
+    font-weight: bold; /* Optional: make the text bold */
+    background-image: linear-gradient(to right, rgb(92, 176, 255), rgb(133, 68, 255), rgb(197, 47, 177), rgb(245, 68, 142));
+    -webkit-background-clip: text; /* Apply the background clip in WebKit-based browsers (like Safari) */
+    background-clip: text; /* Apply the background clip in modern browsers */
+    color: transparent; /* Make the text itself transparent to reveal the gradient */
+}
+
+
+body {
+    background-color: #f5f5f7;
+    color: #6e6e73;
+    font-family: 'SFProDisplayMedium', 'SF Pro Text', Helvetica, Arial, sans-serif;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: -.022em;
+    line-height: 1.4705882353;
+}
+
+/*Header*/
+
+#nav {
+    background-color: #f5f5f7;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 9999;
+    display: block;
+    margin: 0;
+    width: 100%;
+    height: 48px;
+    max-height: 44px;
+    font-size: 0.9375rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow added here */
+}
+
+.nav-content {
+    margin: 0 auto;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1024px;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.nav-list {
+    cursor: default;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    height: 44px;
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+    user-select: none;
+    list-style: none;
+}
+
+.nav-content a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/*Subheader*/
+
+.subheader {
+    overflow-x: hidden;
+    width: 100%;
+    height: 300px;
+    margin-top: 52px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    min-width: 100%;
+}
+
+.row {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 100%;
+    width: 100%;
+    height: 100%;
+}
+
+.row .shop-text {
+    font-size: 48px;
+    font-weight: bold;
+    max-width: 850px;
+    padding-left: 140px;
+
+}
+
+.row .shop-query {
+    font-size: 14px;
+    padding-right: 140px;
+
+}
+
+.shop-query-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shop-query-section img {
+    max-width: 100%;  
+    max-height: 100%;
+    border-radius: 50%;
+    padding-inline-end: 8px;
+    object-fit: cover;
+}
+
+.shop-query-section h3{
+    color: black;
+    font-weight: 500;
+}
+
+.shop-query-section a {
+    color: #106fcf;
+    font-weight: lighter;
+}
+
+.row .sub-shop-text {
+    font-size: 28px;
+    font-weight: bold;
+    max-width: 850px;
+    padding-left: 140px;
+
+}
+
+/*Items*/
+.shop-items {
+    position: relative;
+    width: 100%;
+    height: 170px; /* Height of the platter */
+    overflow-x: auto; /* Enables horizontal scrolling */
+    overflow-y: hidden; /* Hides vertical scrolling */
+    white-space: nowrap; /* Prevents line breaks, keeps content in a single row */
+    /* background-color: #f5f5f5; /* Light gray background */
+    /* border: 2px solid #ccc; Border to visualize the container */ 
+    padding: 10px;
+    padding-left: 140px;
+}
+
+.label {
+    text-decoration: none;
+}
+
+.scrollable-item {
+    display: inline-block;
+    width: 110px; /* Width of each image item */
+    text-align: center;
+    margin-right: 40px; /* Space between items */
+    text-decoration: none;
+}
+
+.scrollable-item img {
+    width: 95%; /* Makes images responsive within their container */
+    height: auto; /* Keeps the aspect ratio */
+    border-radius: 8px; /* Optional: gives a rounded corner effect */
+}
+
+/* Styling for the label */
+.scrollable-item .label {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Items Carousel */
+.carousel-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    padding-left: 130px;
+    padding-bottom: 40px;
+  }
+  
+.carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none; /* For Firefox */
+    width: 100%;
+}
+
+.carousel::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Edge */
+}
+
+.item {
+    position: relative;
+    min-width: 480px;
+    margin: 0 10px;
+    background: #e9e8ed;
+    border: 1px solid #ddd;
+    border-radius: 18px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.item .item-info {
+    position: absolute; /* Position the text relative to the item container */
+    top: 10px; /* Distance from the top */
+    left: 10px; /* Distance from the left */
+    padding: 5px 10px;
+    border-radius: 4px; /* Optional: rounded corners for the text background */
+    font-size: 14px;
+    z-index: 2; /* Higher z-index to appear in front of the image */
+}
+
+.item-name {
+    color: #1d1d1f;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.item-price {
+    font-size: 17px;
+    color: #1d1d1f;
+}
+
+.item img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+    z-index: 1;
+
+}
+
+.item:hover {
+    transform: scale(1.03); /* Slight zoom */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* More prominent shadow */
+}
+
+.carousel-btn {
+    background-color: #c2c5c9;
+    color: rgb(95, 95, 95);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    position: absolute;
+    z-index: 10;
+    margin-right: 40px;
+    opacity: 0.7;
+}
+
+.left-btn {
+    left: -20px;
+    margin-left: 140px;
+  }
+  
+  .right-btn {
+    right: -20px;
+    margin-left: 140px;
+  }
+
+
+
+
+
+
